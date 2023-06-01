@@ -1,3 +1,5 @@
+import { socket } from "./index.js";
+
 export const createChatTextEl = () => {
   const chatBodyEl = document.getElementById("chat-body");
   const textInputEl = document.getElementById("chat-text-input");
@@ -7,7 +9,7 @@ export const createChatTextEl = () => {
   if (inputText !== "") {
     chatTextEl.textContent = inputText;
     chatBodyEl.appendChild(chatTextEl);
-    console.log(textInputEl.value);
+    socket.emit("message", chatTextEl.textContent);
     textInputEl.value = "";
     console.log("textInputEl content", textInputEl.value);
   }
