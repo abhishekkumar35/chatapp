@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Chit Chat</title>
+  </head>
+  <body>
+    <div class="title-container"><span class="title">Chit Chat</span></div>
+    <div class="container">
+      <div class="chat-container">
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-sender">
+          <input id="chat-text-input" />
+          <button id="chat-text-send-btn">SEND</button>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>

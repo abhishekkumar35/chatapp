@@ -1,0 +1,23 @@
+{
+  "name": "chatt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js && npx webpack",
+    "dev": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+    
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
