@@ -5,7 +5,7 @@ socket.on("connect", () => {
   console.log("Connected to Socket.io", socket.id);
 });
 socket.on("message", (data) => {
-  console.log("Message Received", data);
+  console.log("Message Received", data.message);
   createChatTextEl(data);
 });
 

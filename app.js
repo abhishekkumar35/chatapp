@@ -19,6 +19,7 @@ io.on("connection", (socket) => {
   console.log(`new user ${socket.id} is connected`);
 
   socket.on("message", (data) => {
+    chat.push(data);
     socket.broadcast.emit("message", data);
   });
 
