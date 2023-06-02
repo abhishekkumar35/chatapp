@@ -20,7 +20,7 @@ export const createChatTextEl = (data = {}) => {
       chatTextEl.style.textAlign = "end";
       chatTextEl.style.color = "black";
       chatTextEl.style.fontWeight = "bold";
-      chatTextEl.style.fontSize = "24px";
+      chatTextEl.style.fontSize = "20px";
 
       chatTextEl.style.paddingRight = "20px";
     }
