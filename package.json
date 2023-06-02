@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js && npx webpack",
-    "dev": "webpack"
+    "build": "npm app.js && npm run webpack"
   },
   "keywords": [],
   "author": "",
