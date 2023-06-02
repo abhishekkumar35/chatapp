@@ -17,21 +17,11 @@ app.get("/users", (req, res) => {
 
 io.on("connection", (socket) => {
   console.log(`new user ${socket.id} is connected`);
-  socket.on("new-user", (data) => {
-    const usernameExistBool = chat.some((user) =>
-      Object.keys(user).some((key) => key == data.username)
-    );
-    if (usernameExistBool) {
-      socket.emit("user-exist", { message: "Username already Exist" });
-    } else {
-      chat.push({ [data.username]: { socketId: socket.id, messages: [] } });
-      console.log(chat);
-    }
-  });
-  console.log(chat);
+
   socket.on("message", (data) => {
-    console.log(data);
+    socket.broadcast.emit("message", data);
   });
+
   socket.on("disconnect", () => {
     console.log(`${socket.id} is disconnected`);
   });
